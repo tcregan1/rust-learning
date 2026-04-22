@@ -1,0 +1,115 @@
+   0.011919700s  INFO prepare_target{force=false package_id=calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc) target="calc"}: cargo::core::compiler::fingerprint: fingerprint error for calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc)/Check { test: false }/TargetInner { name: "calc", doc: true, ..: with_path("C:\\Users\\paulc\\Documents\\Projects\\rust-learning\\calc\\src\\main.rs", Edition2024) }
+   0.011967000s  INFO prepare_target{force=false package_id=calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc) target="calc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\paulc\Documents\Projects\rust-learning\target\debug\.fingerprint\calc-72f2e998bacac2b5\bin-calc`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.025159300s  INFO prepare_target{force=false package_id=calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc) target="calc"}: cargo::core::compiler::fingerprint: fingerprint error for calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc)/Check { test: true }/TargetInner { name: "calc", doc: true, ..: with_path("C:\\Users\\paulc\\Documents\\Projects\\rust-learning\\calc\\src\\main.rs", Edition2024) }
+   0.025178800s  INFO prepare_target{force=false package_id=calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc) target="calc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\paulc\Documents\Projects\rust-learning\target\debug\.fingerprint\calc-4f6a8628424d8112\test-bin-calc`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.025598700s  INFO prepare_target{force=false package_id=todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo) target="todo"}: cargo::core::compiler::fingerprint: fingerprint error for todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo)/Check { test: false }/TargetInner { name: "todo", doc: true, ..: with_path("C:\\Users\\paulc\\Documents\\Projects\\rust-learning\\todo\\src\\main.rs", Edition2024) }
+   0.025615700s  INFO prepare_target{force=false package_id=todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo) target="todo"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\paulc\Documents\Projects\rust-learning\target\debug\.fingerprint\todo-7e552611eee63252\bin-todo`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.026170100s  INFO prepare_target{force=false package_id=todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo) target="todo"}: cargo::core::compiler::fingerprint: fingerprint error for todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo)/Check { test: true }/TargetInner { name: "todo", doc: true, ..: with_path("C:\\Users\\paulc\\Documents\\Projects\\rust-learning\\todo\\src\\main.rs", Edition2024) }
+   0.026186400s  INFO prepare_target{force=false package_id=todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo) target="todo"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\paulc\Documents\Projects\rust-learning\target\debug\.fingerprint\todo-65bdbe7cc8f55b6b\test-bin-todo`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking calc v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\calc)
+    Checking todo v0.1.0 (C:\Users\paulc\Documents\Projects\rust-learning\todo)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.13s
