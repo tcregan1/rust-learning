@@ -1,7 +1,15 @@
-use std::io;
-
+use core::task;
+use std::{io, path};
+use serde::{Deserialize, Serialize};
+use serde_json::Result;
 fn main() {
-    let mut tasks: Vec<Task> = Vec::new();
+    
+    let mut tasks: Vec<Task> = if path::Path::new("tasks.json").exists() {
+        load_tasks()
+    } else {
+        Vec::new()
+    };
+    
     loop{  
         clear_screen();   
         let mut input = String::new();
@@ -31,7 +39,8 @@ fn add_to_do(tasks: &mut Vec<Task>){
         description: input.trim().to_string(),
         done: false,
     };
-    tasks.push(x)
+    tasks.push(x);
+    save_tasks(tasks);
 
 }
 
@@ -47,7 +56,8 @@ fn check_off_task(tasks: &mut Vec<Task>){
     println!("Invalid index!");
     return;
     }
-    tasks[choice].done = true
+    tasks[choice].done = true;
+    save_tasks(tasks);
 }
 
 fn view_to_do_list(tasks: &mut Vec<Task>) {
@@ -62,7 +72,22 @@ fn clear_screen() {
     print!("\x1B[2J\x1B[1;1H");
 }
 
-struct Task{
+#[derive(Serialize, Deserialize)]
+struct Task {
     description: String,
     done: bool,
+}
+
+
+fn save_tasks(tasks: &Vec<Task>)
+{
+    let j = serde_json::to_string(tasks).expect("Failed to serialize");
+    std::fs::write("tasks.json", j).expect("Failed to write to file");
+}
+
+fn load_tasks() -> Vec<Task> 
+{
+    let data = std::fs::read_to_string("tasks.json").expect("Failed to read file");
+    let tasks: Vec<Task> = serde_json::from_str(&data).expect("Failed to deserialize");
+    tasks
 }
