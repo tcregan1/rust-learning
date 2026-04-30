@@ -16,6 +16,13 @@ fn main() {
         let file_path = &args[2];
         write_to_file(file_path, &args[3..]);
     }   
+    "filter" => 
+    {
+        let file_path = &args[2];
+        let column = &args[3];
+        let filter = &args[4];
+        filter_data(file_path, column, filter);
+    }
 
         _ => println!("Invalid command"),
     }
@@ -73,9 +80,21 @@ fn write_to_file(file_path: &str, fields: &[String]) {
     println!("Row added successfully!");
 }
 
-fn filter_data(){
-
-
+fn filter_data(file_path: &str, column: &str, filter: &str) {
+    let content = read_file(file_path);
+    let header = &content[0];
+    let col_index = header.iter().position(|f| f == column).expect("Column not found!");
+    
+    let mut f: Vec<Vec<String>> = Vec::new();
+    f.push(content[0].clone());
+    
+    for row in content.iter().skip(1) {
+        if row[col_index] == filter {
+            f.push(row.clone());
+        }
+    }
+    
+    print_table(f);
 }
 
 
